@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar">
+        <h1>Calendario</h1>
+        <div class="calendar-header">
+            <button id="prevMonth">Anterior</button>
+            <h2 id="monthYear"></h2>
+            <button id="nextMonth">Siguiente</button>
+        </div>
+        <div class="calendar-body">
+            <div class="calendar-days">
+                <div>Lun</div>
+                <div>Mar</div>
+                <div>Mié</div>
+                <div>Jue</div>
+                <div>Vie</div>
+                <div>Sáb</div>
+                <div>Dom</div>  
+            </div>
+            <div class="calendar-dates" id="calendarDates"></div>
+        </div>
+    </div>
+    <div class="modal" id="activityModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2 id="modalTitle">Agregar/Editar Actividad</h2>
+            <form id="activityForm">
+                <label for="activityTitle">Título:</label>
+                <input type="text" id="activityTitle" name="activityTitle" required>
+                <label for="activityDate">Fecha:</label>
+                <input type="date" id="activityDate" name="activityDate" required>
+                <label for="activityDescription">Descripción:</label>
+                <textarea id="activityDescription" name="activityDescription" required></textarea>
+                <button type="submit" id="saveActivity">Guardar</button>
+                <button type="button" id="deleteActivity">Eliminar</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
